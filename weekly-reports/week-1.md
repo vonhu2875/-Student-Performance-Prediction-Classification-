@@ -6,7 +6,7 @@
 
 **Đề tài:** Đề tài 9 - Student Performance Prediction (Classification)
 
-**Nhóm trưởng:** Võ Thị Bích Như - 235105012
+**Nhóm trưởng:** Võ Thị Bích Như - 2351050127
 ---
 ## 1. Công việc đã hoàn thành 
 
