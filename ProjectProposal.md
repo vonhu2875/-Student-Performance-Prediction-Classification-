@@ -15,7 +15,7 @@
 - **Đề tài số:** 9
 - **Tên:** Student Performance Prediction
 - **Loại bài toán:** Classification
-- **Dataset:** 
+- **Dataset:** https://www.kaggle.com/code/samanyuk/student-performance 
 ## 3. Mục tiêu
 - [Mô tả ngắn 2–3 câu] 
 ## 4. Công nghệ dự kiến
