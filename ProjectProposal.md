@@ -1,4 +1,4 @@
-# Đề xuất đề tài BTL - Trí tuệ nhân tạo 
+# Đề xuất đề tài Bài Tập Lớn - Trí tuệ nhân tạo 
 ## 1. Thông tin nhóm
 - **Nhóm**: 16
 - **Thành viên**:
@@ -15,13 +15,13 @@
 - **Đề tài số:** 9
 - **Tên:** Student Performance Prediction
 - **Loại bài toán:** Classification
-- **Dataset:** https://www.kaggle.com/code/samanyuk/student-performance 
+- **Dataset:** [Student Performance (Kaggle Source)](https://www.kaggle.com/code/samanyuk/student-performance)
 ## 3. Mục tiêu
 - Mục tiêu của đề tài là xây dựng mô hình học máy phân loại (Classification) để dự đoán kết quả học tập của sinh viên (Pass/Fail) dựa trên các yếu tố như thời gian học, môi trường gia đình và lịch sử học tập. Thông qua quá trình phân tích khám phá (EDA), đề tài sẽ rút ra các insight về những yếu tố ảnh hưởng mạnh nhất đến điểm số. Từ đó, cung cấp cơ sở để nhà trường đưa ra các biện pháp cảnh báo và can thiệp hỗ trợ học tập sớm. 
 ## 4. Công nghệ dự kiến
 - **ML**: Python, Scikit-learn, Pandas, Jupyter Notebook, wandb (Tracking).
 - **Frontend**: ReactJS
-- **Backend**: Flask (hoặc FastAPI).
+- **Backend**: Django (Sử dụng Django REST Framework để làm API).
 - **DB:** MySQL (Sử dụng MySQL Workbench) hoặc SQLite (Tùy thuộc vào yêu cầu triển khai thực tế).
 ## 5. Phân công công việc 
 | Thành viên | Công việc chính | Timeline |
