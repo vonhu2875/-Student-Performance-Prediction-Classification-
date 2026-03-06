@@ -17,7 +17,7 @@
 - **Loại bài toán:** Classification
 - **Dataset:** https://www.kaggle.com/code/samanyuk/student-performance 
 ## 3. Mục tiêu
-- [Mô tả ngắn 2–3 câu] 
+- Mục tiêu của đề tài là xây dựng mô hình học máy phân loại (Classification) để dự đoán kết quả học tập của sinh viên (Pass/Fail) dựa trên các yếu tố như thời gian học, môi trường gia đình và lịch sử học tập. Thông qua quá trình phân tích khám phá (EDA), đề tài sẽ rút ra các insight về những yếu tố ảnh hưởng mạnh nhất đến điểm số. Từ đó, cung cấp cơ sở để nhà trường đưa ra các biện pháp cảnh báo và can thiệp hỗ trợ học tập sớm. 
 ## 4. Công nghệ dự kiến
 - **ML**: Python, Scikit-learn, Pandas, Jupyter Notebook, wandb (Tracking).
 - **Frontend**: ReactJS
