@@ -12,9 +12,9 @@
 
 | Thành viên | MSSV | Công việc | Link Commit/PR | 
 |------------|------|-----------|----------------| 
-| Võ Thị Bích Như | 2351050127  | Khởi tạo Repository, thiết lập cấu trúc thư mục, viết bản Đề xuất đề tài(ProjectProposal). | [Commit bản Đề xuất đề tài](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/d30b5c815b9da44101578277b55e6af4afeeb6f5)|
-| Nguyễn Diệp Thái Hà | 2351050037 | Tìm kiếm và lựa chọn dataset, hỗ trợ hoàn thiện bản Đề xuất đề tài|
-| Nguyễn Đức Nhu Toàn | 2351050183  | Tìm kiếm và lựa chọn dataset, thực hiện những bước phân tích dữ liệu đầu tiên. | 
+| Võ Thị Bích Như | 2351050127  | Khởi tạo Repository, thiết lập cấu trúc thư mục, viết bản Đề xuất đề tài (ProjectProposal). | [Khởi tạo Project và bản Đề xuất đề tài](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/d30b5c815b9da44101578277b55e6af4afeeb6f5)|
+| Nguyễn Diệp Thái Hà | 2351050037 | Tìm kiếm và lựa chọn dataset, hỗ trợ hoàn thiện bản Đề xuất đề tài| [Cập nhật bản Đề xuất đề tài](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/77d589ffa3063fcfbfb0d5457831b16013c24f5f) |
+| Nguyễn Đức Nhu Toàn | 2351050183  | Tìm kiếm và lựa chọn dataset, thực hiện những bước phân tích dữ liệu đầu tiên. | [Cập nhật Dataset](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/4d406053cea79dbd4579f7e1fef09a0389796da4) |
 ---
 ## 2. Tiến độ tổng thể
 | Hạng mục | Trạng thái | % | 
@@ -38,7 +38,7 @@
 | **Nguyễn Đức Nhu Toàn** | - Thực hiện EDA trên Notebook.<br>- Vẽ ít nhất 08 biểu đồ trực quan hóa dữ liệu và phân tích biến mục tiêu.<br>- Bắt đầu chuẩn bị Pipeline tiền xử lý dữ liệu dựa trên kết quả EDA. |
 | **Nguyễn Diệp Thái Hà** | - Phân tích các biến đặc trưng từ kết quả EDA để thiết kế các trường nhập liệu phù hợp trên giao diện.<br>- Khởi tạo Project ReactJS và xây dựng khung giao diện cơ bản cho ứng dụng.<br>- Hỗ trợ đóng góp nội dung và kiểm soát chất lượng báo cáo. |
 ---
-## 4. Khó khăn / Cần hỗ trợ [ ] ... 
+## 4. Khó khăn / Cần hỗ trợ
 ---
-*Ngày nộp: DD/MM/YYYY*   
+*Ngày nộp: 06/03/2026*   
 *Xác nhận của Nhóm trưởng: Võ Thị Bích Như*
