@@ -12,14 +12,14 @@
 
 | Thành viên | MSSV | Công việc | Link Commit/PR | 
 |------------|------|-----------|----------------| 
-| Võ Thị Bích Như | 2351050127  | Tổng hợp Notebook, viết nhận xét cho 8 biểu đồ, hoàn thiện báo cáo tuần. | |
-| Nguyễn Diệp Thái Hà | 2351050037 | Phân tích Correlation và Outliers | |
-| Nguyễn Đức Nhu Toàn | 2351050183  | Phân tích biến mục tiêu và vẽ biểu đồ phân phối | |
+| Võ Thị Bích Như | 2351050127  | Tổng hợp Notebook, viết nhận xét cho 8 biểu đồ, hoàn thiện báo cáo tuần. | [Phân tích nhân tố ảnh hưởng và tổng kết](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/6e07fb10f22a2825a6e13519d56d0d42e64392a1) |
+| Nguyễn Diệp Thái Hà | 2351050037 | Phân tích Correlation và Outliers | [Correlation & Outliers](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/968e3d0613df55731e3fb7231b066ed3b00a7775) |
+| Nguyễn Đức Nhu Toàn | 2351050183  | Phân tích biến mục tiêu và vẽ biểu đồ phân phối | [Khởi tạo và phân tích biến mục tiêu](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/3afa49da05e92759817c0272637f73d721c111ca) |
 ---
 ## 2. Tiến độ tổng thể
 | Hạng mục | Trạng thái | % | 
 |----------|------------|---| 
-| EDA | Đang làm  | 30% | 
+| EDA | Đã hoàn thành  | 100% | 
 | Preprocessing + Pipeline | Chưa làm | 0% | 
 | Modeling (≥3 models, wandb) | Chưa làm | 0% | 
 | Model Persistence | Chưa làm | 0% | 
@@ -28,7 +28,7 @@
 | Demo FE ↔ BE ↔ AI | Chưa làm | 0% | 
 | Báo cáo | Chưa làm | 0% | 
 
-**Tổng tiến độ: 10%**
+**Tổng tiến độ: 15%**
 ---
 ## 3. Kế hoạch tuần tới
 
@@ -41,5 +41,5 @@
 ## 4. Khó khăn / Cần hỗ trợ
 - Việc hiện thực hóa các ý tưởng phân tích thành mã nguồn Python còn chậm do các thành viên đang vừa làm vừa nghiên cứu tài liệu.
 ---
-*Ngày nộp: dd/mm/yy*   
+*Ngày nộp: 14/03/2026*   
 *Xác nhận của Nhóm trưởng: Võ Thị Bích Như*
