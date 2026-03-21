@@ -4,12 +4,13 @@ from sklearn.compose import ColumnTransformer
 
 
 def preprocess_data(df, test_size=0.2, random_state=42):
+    df = df.copy()
     # ===== 1. DATA CLEANING =====
-    df.drop(['StudentID', 'Name'], axis=1, inplace=True)
+    df.drop(['StudentID', 'Name'], axis=1, inplace=True, errors='ignore')
     df.fillna(df.mean(numeric_only=True), inplace=True)
     df.fillna(df.mode().iloc[0], inplace=True)
     df.drop_duplicates(inplace=True)
-    df.drop(['Attendance (%)', 'Study Hours'], axis=1, inplace=True)
+    df.drop(['Attendance (%)', 'Study Hours'], axis=1, inplace=True, errors='ignore')
 
     cols_0_100 = ['AttendanceRate', 'PreviousGrade', 'FinalGrade']
     df = df[(df[cols_0_100].ge(0).all(axis=1)) &
@@ -36,8 +37,6 @@ def preprocess_data(df, test_size=0.2, random_state=42):
         ('cat', OneHotEncoder(handle_unknown='ignore'), cat_cols)
     ])
 
-    X_train_processed = preprocessor.fit_transform(X_train)
-    X_test_processed = preprocessor.transform(X_test)
+    return X_train, X_test, y_train, y_test, preprocessor
 
-    return X_train_processed, X_test_processed, y_train, y_test, preprocessor
 
