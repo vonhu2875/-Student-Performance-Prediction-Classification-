@@ -12,9 +12,9 @@
 
 | Thành viên | MSSV | Công việc | Link Commit/PR | 
 |------------|------|-----------|----------------| 
-| Võ Thị Bích Như | 2351050127  | Xây dựng giao diện ReactJS, xử lý logic gửi nhận dữ liệu API và đồng bộ kiểu dữ liệu với mô hình. | [Link Commit]() |
-| Nguyễn Diệp Thái Hà | 2351050037 | Kiểm thử hệ thống (Integration Testing), đối soát kết quả dự đoán giữa môi trường Test và môi trường Web thực tế. |[Link Commit]() |
-| Nguyễn Đức Nhu Toàn | 2351050183  | Xây dựng Backend API (Django Rest Framework), tích hợp mô hình .pkl và tối ưu hóa Feature Engineering trên Server. | [Link Commit]() |
+| Võ Thị Bích Như | 2351050127  | Xây dựng giao diện ReactJS, xử lý logic gửi nhận dữ liệu API và đồng bộ kiểu dữ liệu với mô hình. | [Link Commit](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/c5f1588263d2bde1568e580a8608a4e1eecf927b) |
+| Nguyễn Diệp Thái Hà | 2351050037 | Kiểm thử hệ thống (Integration Testing), đối soát kết quả dự đoán giữa môi trường Test và môi trường Web thực tế. |[Link Commit](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/7e420a3b105d445d4368b5cca1d1322412ca8b56) |
+| Nguyễn Đức Nhu Toàn | 2351050183  | Xây dựng Backend API (Django Rest Framework), tích hợp mô hình .pkl và tối ưu hóa Feature Engineering trên Server. | [Link Commit](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/e06f0d032d14d2c8efd5a6dbc0beb61c5a6f7447) |
 ---
 ## 2. Tiến độ tổng thể
 | Hạng mục | Trạng thái | % | 
