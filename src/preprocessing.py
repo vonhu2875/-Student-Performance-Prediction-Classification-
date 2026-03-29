@@ -12,10 +12,11 @@ def clean_data(df):
     df.drop_duplicates(inplace=True)
 
     # Không lọc FinalGrade ở đây vì là biến mục tiêu
-    cols_check = ['AttendanceRate', 'PreviousGrade']
+    cols_check = ['AttendanceRate', 'StudyHoursPerWeek', 'PreviousGrade']
+
     for col in cols_check:
         if col in df.columns:
-            df = df[(df[col] >= 0) & (df[col] <= 100)]
+            df = df[df[col].between(0, 100)]
 
     # ===== 2. FEATURE ENGINEERING =====
     df['Study_Attendance_Score'] = df['StudyHoursPerWeek'] * df['AttendanceRate']
