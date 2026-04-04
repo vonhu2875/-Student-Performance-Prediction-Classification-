@@ -1,38 +1,42 @@
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.impute import SimpleImputer
 
+def preprocess_data(df):
 
-def clean_data(df):
-    df = df.copy()
-    # ===== 1. DATA CLEANING =====
-    df.drop(['StudentID', 'Name'], axis=1, inplace=True, errors='ignore')
-    df.fillna(df.mean(numeric_only=True), inplace=True)
-    df.fillna(df.mode().iloc[0], inplace=True)
-    df.drop_duplicates(inplace=True)
+    # Drop cột không cần
+    df = df.drop(['StudentID', 'Name'], axis=1)
 
-    # Không lọc FinalGrade ở đây vì là biến mục tiêu
-    cols_check = ['AttendanceRate', 'PreviousGrade']
-    for col in cols_check:
-        if col in df.columns:
-            df = df[(df[col] >= 0) & (df[col] <= 100)]
+    # Tạo target
+    df['pass'] = df['FinalGrade'].apply(lambda x: 1 if x >= 50 else 0)
 
-    # ===== 2. FEATURE ENGINEERING =====
-    df['Study_Attendance_Score'] = df['StudyHoursPerWeek'] * df['AttendanceRate']
-    df['Study_per_Activity'] = df['StudyHoursPerWeek'] / (df['ExtracurricularActivities'] + 1)
+    # Tách X, y
+    X = df.drop(['FinalGrade', 'pass'], axis=1)
+    y = df['pass']
 
-    return df
+    # Xử lý missing
+    num_cols = X.select_dtypes(include=['float64', 'int64']).columns
+    cat_cols = X.select_dtypes(include='object').columns
 
-def get_preprocess(X_train):
-    # ===== 3. ENCODING + SCALING =====
-    num_cols = X_train.select_dtypes(include=['int64', 'float64']).columns
-    cat_cols = X_train.select_dtypes(include=['object', 'str', 'bool']).columns
+    imputer_num = SimpleImputer(strategy='mean')
+    X[num_cols] = imputer_num.fit_transform(X[num_cols])
 
-    preprocessor = ColumnTransformer([
-        ('num', StandardScaler(), num_cols),
-        ('cat', OneHotEncoder(handle_unknown='ignore'), cat_cols)
-    ])
+    imputer_cat = SimpleImputer(strategy='most_frequent')
+    X[cat_cols] = imputer_cat.fit_transform(X[cat_cols])
 
-    return preprocessor
+    # Encode categorical
+    le = LabelEncoder()
+    for col in cat_cols:
+        X[col] = le.fit_transform(X[col])
 
+    # Train test split
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42, stratify=y
+    )
 
+    # Scale
+    scaler = StandardScaler()
+    X_train = scaler.fit_transform(X_train)
+    X_test = scaler.transform(X_test)
+
+    return X_train, X_test, y_train, y_test, scaler
