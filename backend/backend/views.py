@@ -1,5 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework import status
+from src.preprocessing import validate_input   
 import joblib
 import os
 import pandas as pd
@@ -14,30 +16,53 @@ else:
     print("Lỗi: Không tìm thấy file model!")
 
 
+GRADE_MIN = 0.0
+GRADE_MAX = 100.0
+
+
 @api_view(['POST'])
 def predict_view(request):
+    # ── 1. Kiểm tra model đã load chưa ──────────────────────────────────────
+    if model is None:
+        return Response(
+            {'error': 'Model chưa được load. Vui lòng liên hệ quản trị viên.'},
+            status=status.HTTP_503_SERVICE_UNAVAILABLE
+        )
+
     data = request.data
 
-    att = float(data.get('AttendanceRate', 0))
-    study = float(data.get('StudyHoursPerWeek', 0))
-    prev = float(data.get('PreviousGrade', 0))
-    act = int(float(data.get('ExtracurricularActivities', 0)))
-    gender = data.get('Gender')
-    support = data.get('ParentalSupport')
+    # ── 2. Validate input ────────────────────────────────────────────────────
+    errors = validate_input(data)
+    if errors:
+        return Response(
+            {'error': 'Dữ liệu đầu vào không hợp lệ.', 'details': errors},
+            status=status.HTTP_400_BAD_REQUEST
+        )
 
-    online_input = data.get('Online Classes Taken')
-    is_online = str(online_input).lower() == 'true'
+    # ── 3. Parse (an toàn vì đã validate ở trên) ────────────────────────────
+    att    = float(data['AttendanceRate'])
+    study  = float(data['StudyHoursPerWeek'])
+    prev   = float(data['PreviousGrade'])
+    act    = int(float(data['ExtracurricularActivities']))
+    gender  = str(data['Gender']).strip()
+    support = str(data['ParentalSupport']).strip()
+    is_online = str(data['Online Classes Taken']).strip().lower() in ('true', '1', 'yes')
+
+    # ── 4. Feature engineering (phải khớp với preprocessing.py) ─────────────
+    raw_score             = study * att
+    study_attendance_score = np.log1p(raw_score)        # log-scale như clean_data()
+    study_per_activity    = study / (act + 1)
 
     df = pd.DataFrame([{
-        'AttendanceRate': att,
-        'StudyHoursPerWeek': study,
-        'PreviousGrade': prev,
+        'AttendanceRate':           att,
+        'StudyHoursPerWeek':        study,
+        'PreviousGrade':            prev,
         'ExtracurricularActivities': act,
-        'Gender': gender,
-        'ParentalSupport': support,
-        'Online Classes Taken': is_online,
-        'Study_Attendance_Score': float(study * att),
-        'Study_per_Activity': float(study / (act + 1))
+        'Gender':                   gender,
+        'ParentalSupport':          support,
+        'Online Classes Taken':     is_online,
+        'Study_Attendance_Score':   study_attendance_score,
+        'Study_per_Activity':       study_per_activity,
     }])
 
     cols = [
@@ -47,6 +72,9 @@ def predict_view(request):
     ]
     df = df[cols]
 
+    # ── 5. Predict + clamp kết quả về [0, 100] ───────────────────────────────
     prediction = model.predict(df)
+    predicted_grade = float(prediction[0])
+    predicted_grade = max(GRADE_MIN, min(GRADE_MAX, predicted_grade))  # clamp
 
-    return Response({'result': prediction[0]})
+    return Response({'result': round(predicted_grade, 2)})
