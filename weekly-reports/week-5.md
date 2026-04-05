@@ -14,7 +14,7 @@
 |------------|------|-----------|----------------| 
 | Võ Thị Bích Như | 2351050127  | Bổ sung một số điểm theo yêu cầu đề tài | [Link Commit](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/05c5f5be820d3d97c5e89ad5e0ae554fba883944) |
 | Nguyễn Diệp Thái Hà | 2351050037 | Tìm hiểu và tiến hành làm Wandb |[Link Commit](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/d94ce3772ccc1472d1f367322cfca638c71049bb) |
-| Nguyễn Đức Nhu Toàn | 2351050183  | Đang trong quá trình tìm hiểu làm backend | [Link Commit]() |
+| Nguyễn Đức Nhu Toàn | 2351050183  | Đang trong quá trình tìm hiểu làm backend | [Link Commit](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/8dc60030b3cab457e8e695f5b9c998e5b1cb068a) |
 ---
 ## 2. Tiến độ tổng thể
 | Hạng mục | Trạng thái | % | 
@@ -34,9 +34,9 @@
 
 | Thành viên | Công việc dự kiến |
 | --- | --- |
-| **Võ Thị Bích Như** | Hoàn thiện thẩm mỹ giao diện (CSS) và xử lý các trạng thái lỗi (Loading/Error) trên UI. |
+| **Võ Thị Bích Như** | Tiến hành rà soát, sửa chữa lại một số mục trong dự án. Đồng thời làm giao diện Frontend |
 | **Nguyễn Đức Nhu Toàn** | Tiếp tục hoàn thiện phần backend, xử lý các lỗi có thể xảy ra |
-| **Nguyễn Diệp Thái Hà** | Tích hợp thư viện Weights & Biases (WandB) để quản lý lịch sử huấn luyện mô hình. |
+| **Nguyễn Diệp Thái Hà** | Tiếp tục thực hiện Wandb |
 ---
 ## 4. Khó khăn / Cần hỗ trợ
 - Tập dữ liệu có sự chênh lệch lớn giữa lớp PASS (96%) và FAIL (4%). Điều này khiến chỉ số Accuracy cao nhưng Recall lớp FAIL thấp.
