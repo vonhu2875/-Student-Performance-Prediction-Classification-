@@ -7,8 +7,17 @@ def preprocess_data(df):
     # Drop cột không cần
     df = df.drop(['StudentID', 'Name'], axis=1)
 
+<<<<<<< HEAD
     # Tạo target
     df['pass'] = df['FinalGrade'].apply(lambda x: 1 if x >= 50 else 0)
+=======
+    # Không lọc FinalGrade ở đây vì là biến mục tiêu
+    cols_check = ['AttendanceRate', 'StudyHoursPerWeek', 'PreviousGrade']
+
+    for col in cols_check:
+        if col in df.columns:
+            df = df[df[col].between(0, 100)]
+>>>>>>> 2ab2841dc8e81a0fd83c399fe1145670df571b44
 
     # Tách X, y
     X = df.drop(['FinalGrade', 'pass'], axis=1)
