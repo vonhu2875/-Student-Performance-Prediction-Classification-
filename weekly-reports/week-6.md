@@ -13,7 +13,7 @@
 | Thành viên | MSSV | Công việc | Link Commit/PR | 
 |------------|------|-----------|----------------| 
 | Võ Thị Bích Như | 2351050127  | Thay đổi, bổ sung một số điểm theo yêu cầu đề tài, hỗ trợ làm phần Backend | [Link Commit](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/7a2fa71a04c67a005b689332de0059abaee84498) |
-| Nguyễn Diệp Thái Hà | 2351050037 | Tìm hiểu và tiến hành làm Wandb |[Link Commit]() |
+| Nguyễn Diệp Thái Hà | 2351050037 | Tìm hiểu và tiến hành làm Wandb |[Link Commit](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/51f2068a168ae67610ecda95f273a9261a9742d6) |
 | Nguyễn Đức Nhu Toàn | 2351050183  | Đang trong quá trình tìm hiểu làm backend | [Link Commit](https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-/commit/eb045169d95171f5946893e0eb1c638f3ef42307) |
 ---
 ## 2. Tiến độ tổng thể
