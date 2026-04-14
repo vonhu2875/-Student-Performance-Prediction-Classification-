@@ -10,33 +10,43 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from src.preprocessing import validate_input
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(BASE_DIR, 'backend', 'models', 'best_model.pkl')
+BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(BASE_DIR, '..'))
 
-model = joblib.load(model_path)
+model_path  = os.path.join(project_root, 'notebooks', 'models', 'model.joblib')
+scaler_path = os.path.join(project_root, 'notebooks', 'models', 'scaler.joblib')
 
+model  = joblib.load(model_path)
+scaler = joblib.load(scaler_path)
 
-# ============================================================
-# HÀM HỖ TRỢ
-# ============================================================
+# Mean imputation cho 2 cột không có trong form
+_means              = dict(zip(scaler.feature_names_in_, scaler.mean_))
+STUDY_HOURS_MEAN    = _means['Study Hours']
+ATTENDANCE_PCT_MEAN = _means['Attendance (%)']
+
+GENDER_MAP  = {'Female': 0, 'Male': 1}
+SUPPORT_MAP = {'Low': 0, 'Medium': 1, 'High': 2}
+
 
 def make_prediction(att, study, prev, act, gender, support, online):
-    data = pd.DataFrame([{
+    df = pd.DataFrame([{
+        'Gender':                    GENDER_MAP.get(gender, 0),
         'AttendanceRate':            att,
         'StudyHoursPerWeek':         study,
         'PreviousGrade':             prev,
         'ExtracurricularActivities': act,
-        'Gender':                    gender,
-        'ParentalSupport':           support,
-        'Online Classes Taken':      online,
-        'Study_Attendance_Score':    study * att,
-        'Study_per_Activity':        study / (act + 1),
+        'ParentalSupport':           SUPPORT_MAP.get(support, 1),
+        'Study Hours':               STUDY_HOURS_MEAN,
+        'Attendance (%)':            ATTENDANCE_PCT_MEAN,
+        'Online Classes Taken':      int(online),
     }])
-    prediction  = model.predict(data)[0]
-    # Chuyển prediction thành probability bằng sigmoid
-    prob_value = 1 / (1 + np.exp(-prediction))
-    label = 'Pass' if prob_value >= 0.5 else 'Fail'
-    prob  = round(float(prob_value), 4)
+    X_scaled   = scaler.transform(df)
+    prediction = model.predict(X_scaled)[0]
+    label      = 'Pass' if prediction == 1 else 'Fail'
+    # SVM probability=False → dùng decision_function + sigmoid
+    decision   = float(model.decision_function(X_scaled)[0])
+    raw_prob   = 1 / (1 + np.exp(-decision))
+    prob       = round(raw_prob if prediction == 1 else 1 - raw_prob, 4)
     return label, prob
 
 
