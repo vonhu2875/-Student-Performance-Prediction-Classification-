@@ -1,0 +1,32 @@
+{
+  "os":  "Windows-10-10.0.26200-SP0",
+  "python":  "CPython 3.11.9",
+  "startedAt":  "2026-04-20T14:01:24.925229Z",
+  "args":  [
+    "-f",
+    "C:\\Users\\ADMIN\\AppData\\Local\\Temp\\kernel-186c7c2d-aab0-4df6-bf83-549879c2aca312577958636011329151\\connection.json",
+    "--IPCompleter.use_jedi=False",
+    "--IPKernelApp.log_level=INFO"
+  ],
+  "program":  "<python with no main file>",
+  "git":  {
+    "remote":  "https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-.git",
+    "commit":  "358fec78e6146a70705c4ac6d0fad7bc6b771e52"
+  },
+  "email":  "2351050127nhu@ou.edu.vn",
+  "root":  "D:\\-Student-Performance-Prediction-Classification-\\notebooks",
+  "host":  "BichNhu",
+  "executable":  "D:\\-Student-Performance-Prediction-Classification-\\.venv\\Scripts\\python.exe",
+  "cpu_count":  2,
+  "cpu_count_logical":  4,
+  "disk":  {
+    "/":  {
+      "total":  "314571747328",
+      "used":  "141979078656"
+    }
+  },
+  "memory":  {
+    "total":  "8263585792"
+  },
+  "writerId":  "4f4zw4hrsr0cucfo8w064b0y8wcbd4hg"
+}
