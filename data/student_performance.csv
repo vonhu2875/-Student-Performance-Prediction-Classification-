@@ -999,3 +999,23 @@ StudentID,Name,Gender,AttendanceRate,StudyHoursPerWeek,PreviousGrade,Extracurric
 1886.0,,Male,85.0,8.0,82.0,2.0,Low,68.0,0.4,54.0,False
 7636.0,Joseph Sherman,Male,88.0,17.0,60.0,2.0,High,85.0,0.9,53.0,True
 8021.0,Maria Walls,Female,88.0,10.0,90.0,1.0,Medium,,2.4,94.0,True
+9001,Nguyen Van An,Male,5.0,0.5,10.0,0.0,Low,5.0,0.5,5.0,False
+9002,Le Thi Buoi,Female,10.0,1.0,15.0,0.0,Low,6.0,1.0,10.0,False
+9003,Tran Van Cuong,Male,8.0,0.0,12.0,1.0,Low,4.0,0.0,8.0,False
+9004,Pham Minh Dang,Male,12.0,2.0,20.0,0.0,Low,7.0,2.0,12.0,False
+9005,Hoang Thi En,Female,15.0,1.5,18.0,0.0,Low,8.0,1.5,15.0,False
+9006,Ngo Van Giang,Male,2.0,0.5,5.0,0.0,Low,3.0,0.5,2.0,False
+9007,Do Thi Hoa,Female,20.0,3.0,25.0,1.0,Low,9.0,3.0,20.0,False
+9008,Bui Van Hung,Male,25.0,4.0,30.0,0.0,Medium,8.5,4.0,25.0,False
+9009,Ly Thi Kim,Female,5.0,1.0,10.0,0.0,Low,5.5,1.0,5.0,False
+9010,Chu Xuan Long,Male,10.0,0.0,15.0,0.0,Low,4.5,0.0,10.0,False
+9011,Trinh Quoc Nam,Male,18.0,2.5,22.0,0.0,Low,7.5,2.5,18.0,False
+9012,Vu Thi Oanh,Female,7.0,1.0,14.0,1.0,Low,6.5,1.0,7.0,False
+9013,Ta Minh Phu,Male,12.0,2.0,19.0,0.0,Low,8.2,2.0,12.0,False
+9014,Dinh Thi Quynh,Female,4.0,0.5,8.0,0.0,Low,3.5,0.5,4.0,False
+9015,Quach Van Son,Male,22.0,3.5,28.0,1.0,Low,9.5,3.5,22.0,False
+9016,Luong Thu Thao,Female,15.0,2.0,20.0,0.0,Low,7.8,2.0,15.0,False
+9017,Dang Quoc Uy,Male,9.0,1.0,12.0,0.0,Low,5.2,1.0,9.0,False
+9018,Kieu Thi Xuan,Female,30.0,5.0,35.0,0.0,Medium,9.8,5.0,30.0,False
+9019,Truong Van Yen,Male,6.0,0.5,11.0,1.0,Low,4.8,0.5,6.0,False
+9020,Phan Anh Quan,Male,11.0,1.5,16.0,0.0,Low,6.2,1.5,11.0,False

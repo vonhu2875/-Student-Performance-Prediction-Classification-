@@ -1,0 +1,28 @@
+{
+  "os":  "Windows-10-10.0.26200-SP0",
+  "python":  "CPython 3.11.9",
+  "startedAt":  "2026-04-20T15:26:19.589406Z",
+  "program":  "D:\\-Student-Performance-Prediction-Classification-\\src\\test_model.py",
+  "codePath":  "src\\test_model.py",
+  "codePathLocal":  "test_model.py",
+  "git":  {
+    "remote":  "https://github.com/vonhu2875/-Student-Performance-Prediction-Classification-.git",
+    "commit":  "358fec78e6146a70705c4ac6d0fad7bc6b771e52"
+  },
+  "email":  "2351050127nhu@ou.edu.vn",
+  "root":  "D:\\-Student-Performance-Prediction-Classification-\\src",
+  "host":  "BichNhu",
+  "executable":  "D:\\-Student-Performance-Prediction-Classification-\\.venv\\Scripts\\python.exe",
+  "cpu_count":  2,
+  "cpu_count_logical":  4,
+  "disk":  {
+    "/":  {
+      "total":  "314571747328",
+      "used":  "141978656768"
+    }
+  },
+  "memory":  {
+    "total":  "8263585792"
+  },
+  "writerId":  "l08wv4uwb14xqbwecfp9zfm4vzuxghpd"
+}

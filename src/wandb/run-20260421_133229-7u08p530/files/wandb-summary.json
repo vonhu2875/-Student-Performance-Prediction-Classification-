@@ -1,0 +1,1 @@
+{"best_f1_macro":0.4897959183673469,"best_params":"{'model__max_depth': 20, 'model__min_samples_leaf': 2, 'model__n_estimators': 200}","_timestamp":1.7767531778757184e+09,"_step":0,"_wandb":{"runtime":23},"_runtime":23}
