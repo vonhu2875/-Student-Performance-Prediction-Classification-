@@ -2,65 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a37224b4-38a8-4560-9f3b-cd0d163bac46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/PredictionForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/student_performance.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.old.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/eslint.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/icons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/hero.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/final_best_student_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/final_best_student_model.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/student_performance_p2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/student_performance_p2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/01_pass_fail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/02_final_grade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/03_study_hours.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/04_scatter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/05_attendance.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/06_boxplot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/07_heatmap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/08_kde.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/09_missing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/10_line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/W&amp;B Chart 4_20_2026, 8_51_04 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/W&amp;B Chart 4_20_2026, 8_51_13 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/W&amp;B Chart 4_20_2026, 8_51_24 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/W&amp;B Chart 4_20_2026, 8_51_36 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/W&amp;B Chart 4_20_2026, 8_51_49 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/wandb_export_2026-04-20T20_49_17.414+07_00.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/train.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tuning.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tuning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +69,7 @@
       <recent name="D:\-Student-Performance-Prediction-Classification-\backend" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.app (1)">
     <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="-Student-Performance-Prediction-Classification-" />
       <option name="ENV_FILES" value="" />
@@ -242,10 +187,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.app (1)" />
         <item itemvalue="Python.tuning" />
         <item itemvalue="Python.train" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.app" />
       </list>
     </recent_temporary>
