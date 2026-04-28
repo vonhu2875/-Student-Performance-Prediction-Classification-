@@ -60,7 +60,7 @@ preprocessor = ColumnTransformer([
 ])
 
 # --- 2. KHỞI TẠO WANDB ---
-wandb.init(project="student-performance-v2", name="Hyperparameter_Tuning_RF")
+wandb.init(project="student-performance-v2", entity="vothibichnhu2875", name="Hyperparameter_Tuning_RF")
 
 # --- 3. TẠO PIPELINE TRỌN GÓI (End-to-End Pipeline) ---
 # Quy trình: Tiền xử lý -> SMOTE -> Model

@@ -29,6 +29,7 @@ for name, model in models_dict.items():
     # Khởi tạo Run trên WandB
     run = wandb.init(
         project="student-performance-v2",
+        entity="vothibichnhu2875",
         name=f"Run_{name}",
         config={
             "model_type": name,
