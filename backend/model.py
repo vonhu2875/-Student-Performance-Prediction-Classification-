@@ -1,0 +1,21 @@
+from database import db
+
+class PredictionHistory(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    student_name = db.Column(db.String(100))
+    age = db.Column(db.Integer)
+    gender = db.Column(db.String(20))
+    school_type = db.Column(db.String(20))
+    parent_education = db.Column(db.String(50))
+    study_hours = db.Column(db.Float)
+    attendance = db.Column(db.Float)
+    math_score = db.Column(db.Float)
+    science_score = db.Column(db.Float)
+    english_score = db.Column(db.Float)
+    internet_access = db.Column(db.String(10))
+    travel_time = db.Column(db.String(20))
+    extra_activities = db.Column(db.String(10))
+    study_method = db.Column(db.String(30))
+    result = db.Column(db.String(20))
+    probability = db.Column(db.Float)
+    timestamp = db.Column(db.DateTime, server_default=db.func.now())

@@ -2,59 +2,70 @@ import joblib
 import pandas as pd
 import os
 
-# 1. Load mô hình trọn gói (Pipeline)
+# 1. Load mô hình
 model_path = '../models/final_best_student_model.pkl'
+
 if not os.path.exists(model_path):
-    print("Không tìm thấy file model! Như hãy chạy lại file tuning.py trước nhé.")
+    print(f"Không tìm thấy file tại: {model_path}")
 else:
-    model = joblib.load(model_path)
+    pipeline = joblib.load(model_path)
 
     # 2. Tạo dữ liệu sinh viên mới
-    #Dữ liệu học sinh giỏi - pass
-    new_student = pd.DataFrame([{
-            'Gender': 'Male',  # Male/Female tùy dữ liệu
-            'AttendanceRate': 95.0,  # Điểm danh rất cao
-            'StudyHoursPerWeek': 20.0,  # Học 20 tiếng/tuần
-            'PreviousGrade': 85.0,  # Điểm cũ giỏi
-            'ExtracurricularActivities': 1.0,
-            'ParentalSupport': 'High',  # Hỗ trợ từ gia đình tốt
-            'Online Classes Taken': True,
-            'Study Hours': 20.0,
-            'Attendance (%)': 95.0
-        }])
-    # Dữ liệu học sinh dở - fail
+    # #1: SINH VIÊN CHĂM CHỈ (Kỳ vọng: PASS)
     # new_student = pd.DataFrame([{
-    #     'Gender': 'Male',
-    #     'AttendanceRate': 5.0,  # Cực thấp
-    #     'StudyHoursPerWeek': 0.5,  # Gần như không học
-    #     'PreviousGrade': 5.0,  # Điểm cũ lẹt đẹt
-    #     'ExtracurricularActivities': 0.0,
-    #     'ParentalSupport': 'Low',
-    #     'Online Classes Taken': False,
-    #     'Study Hours': 0.5,
-    #     'Attendance (%)': 5.0
+    #     'age': 18,
+    #     'gender': 'Female',
+    #     'school_type': 'Private',
+    #     'parent_education': "Master's Degree",
+    #     'study_hours': 15.0,
+    #     'attendance_percentage': 92.0,
+    #     'internet_access': 'Yes',
+    #     'travel_time': 'Short',
+    #     'extra_activities': 'Yes',
+    #     'study_method': 'Group',
+    #     'math_score': 85.0,
+    #     'science_score': 80.0,
+    #     'english_score': 88.0
     # }])
-    # 3. Tạo các cột tính toán (Feature Engineering) - BẮT BUỘC phải có
-    new_student['Study_Attendance'] = new_student['StudyHoursPerWeek'] * new_student['AttendanceRate']
-    new_student['Study_Efficiency'] = 0.2
 
-    # --- BƯỚC QUAN TRỌNG: Đảm bảo thứ tự cột phải khớp hoàn toàn với lúc Train ---
-    # Lấy danh sách cột mà Pipeline yêu cầu
-    feature_names = model.feature_names_in_
-    new_student = new_student[feature_names]
+    # 2: SINH VIÊN LƯỜI HỌC (Kỳ vọng: FAIL) - Như có thể uncomment để test
+    new_student = pd.DataFrame([{
+        'age': 18,
+        'gender': 'male',
+        'school_type': 'public',
+        'parent_education': 'diploma',
+        'study_hours': 15.0,
+        'attendance_percentage': 37.0,
+        'internet_access': 'yes',
+        'travel_time': '<15 min',
+        'extra_activities': 'yes',
+        'study_method': 'notes',
+        'math_score': 70.0,
+        'science_score': 30.0,
+        'english_score': 70.0
+    }])
 
-    # 4. Dự đoán
+    # 3. FEATURE ENGINEERING
+    new_student['Study_Attendance'] = new_student['study_hours'] * new_student['attendance_percentage']
+    new_student['Academic_Avg'] = (new_student['math_score'] + new_student['science_score'] + new_student[
+        'english_score']) / 3
+
+    # 4. DỰ ĐOÁN
     try:
-        prediction = model.predict(new_student)
-        probability = model.predict_proba(new_student)
+        # Pipeline sẽ tự động thực hiện: preprocessor -> predict
+        prediction = pipeline.predict(new_student)
+        probability = pipeline.predict_proba(new_student)
 
-        print("\n" + "=" * 35)
-        print("KẾT QUẢ DỰ ĐOÁN SINH VIÊN")
-        print("=" * 35)
-        result = "PASS (ĐẬU)" if prediction[0] == 1 else "❄️ FAIL (RỚT)"
+        print("\n" + "=" * 40)
+        print("KẾT QUẢ DỰ ĐOÁN SINH VIÊN (Dữ liệu mới)")
+        print("=" * 40)
+
+        result = "PASS" if prediction[0] == 1 else "FAIL"
+
         print(f"Kết luận: {result}")
-        print(f"Chi tiết: FAIL ({probability[0][0]:.2%}) | PASS ({probability[0][1]:.2%})")
-        print("=" * 35)
+        print(f"Xác suất FAIL: {probability[0][0]:.2%}")
+        print(f"Xác suất PASS: {probability[0][1]:.2%}")
+        print("=" * 40)
 
     except Exception as e:
-        print(f"Lỗi dự đoán: {e}")
+        print(f"Lỗi: Có thể thiếu cột hoặc tên cột sai. Chi tiết: {e}")
